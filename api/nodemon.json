@@ -1,0 +1,14 @@
+{
+    "signal": "SIGKILL",
+    "execMap": {
+        "go": "go run"
+    },
+    "ignore": [
+        ".git",
+        "node_modules/**"
+    ],
+    "watch": [
+        "handlers/",
+        "*.go"
+    ]
+}

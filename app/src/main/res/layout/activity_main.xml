@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnClient"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickClient"
+        android:text="Client" />
+
+    <Button
+        android:id="@+id/btnProvider"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickProvider"
+        android:text="Provider" />
+
+    <Button
+        android:id="@+id/buttonSettings"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSettings"
+        android:text="Settings" />
+
+    <TextView
+        android:id="@+id/settingsTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Provider Hotspot Settings"
+        android:textAlignment="center"
+        android:paddingTop="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/settingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center" />
+</LinearLayout>

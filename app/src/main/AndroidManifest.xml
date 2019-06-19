@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mul">
+    <!-- Required for Nearby Connections -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.TETHER_PRIVILEGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/mul_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/mul_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".topUp"></activity>
+
+        <service
+            android:name=".HotSpotIntentService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".receiver.HotSpotIntentReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.mul.TURN_ON" />
+                <action android:name="com.example.mul.TURN_OFF" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ClientActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ProviderActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Active_Provider"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Active_Client"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Session_Limits" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DiscoverDevices"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device" />
+        <activity android:name=".MagicActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="wifihotspot" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

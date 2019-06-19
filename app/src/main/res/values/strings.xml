@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Mul</string>
+    <string name="toolbarTitle">Android Bluetooth Example</string>
+    <string name="openbt">Open Bluetooth</string>
+    <string name="makeVisible">Make Bluetooth Visible</string>
+    <string name="findDevices">Find Devices</string>
+
+    <!--  BluetoothChat -->
+    <string name="send">Send</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Mul Application.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="title_not_connected">not connected</string>
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <!-- Options Menu -->
+    <string name="connect">Connect a device</string>
+    <string name="discoverable">Make discoverable</string>
+
+    <!-- Hotspot stuff -->
+    <string name="intent_action_turnon">com.example.mul.TURN_ON</string>
+    <string name="intent_action_turnoff">com.example.mul.TURN_OFF</string>
+
+    <string name="intent_data_scheme">wifihotspot</string>
+    <string name="intent_data_host_turnon">turnon</string>
+    <string name="intent_data_host_turnoff">turnoff</string>
+
+    <string name="notification_chnnl">Hot Spot</string>
+    <string name="notification_chnnl_location_descr">Keeps wifi hot spot persistent</string>
+
+    <!-- Session Limits stuff -->
+    <string-array name="ui_data_spinner_entries">
+        <item>MB</item>
+        <item>GB</item>
+    </string-array>
+
+    <string name="preference">shared_preferences</string>
+    <string name="preference_key">values</string>
+
+</resources>

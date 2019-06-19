@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dataUsedTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Used:"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/dataUsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/balanceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Balance: "
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/topupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickTopUp"
+        android:text="TOP UP YOUR ACCOUNT" />
+
+    <Button
+        android:id="@+id/startConnection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickConnect"
+        android:text="Connect to Provider" />
+
+</LinearLayout>
